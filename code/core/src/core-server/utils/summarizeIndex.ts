@@ -4,6 +4,7 @@ import type { IndexEntry, StoryIndex } from 'storybook/internal/types';
 import { AUTODOCS_TAG, PLAY_FN_TAG, isMdxEntry } from './StoryIndexGenerator';
 
 const PAGE_REGEX = /(page|screen)/i;
+const SVELTE_CSF_TAG = 'svelte-csf';
 
 export const isPageStory = (storyId: string) => PAGE_REGEX.test(storyId);
 
@@ -35,6 +36,7 @@ export function summarizeIndex(storyIndex: StoryIndex) {
   let playStoryCount = 0;
   let autodocsCount = 0;
   let mdxCount = 0;
+  let svelteCsfCount = 0;
   Object.values(storyIndex.entries).forEach((entry) => {
     if (isCLIExampleEntry(entry)) {
       if (entry.type === 'story') {
@@ -61,6 +63,9 @@ export function summarizeIndex(storyIndex: StoryIndex) {
       if (entry.tags?.includes(PLAY_FN_TAG)) {
         playStoryCount += 1;
       }
+      if (entry.tags?.includes(SVELTE_CSF_TAG)) {
+        svelteCsfCount += 1;
+      }
     } else if (entry.type === 'docs') {
       if (isMdxEntry(entry)) {
         mdxCount += 1;
@@ -81,6 +86,7 @@ export function summarizeIndex(storyIndex: StoryIndex) {
     exampleDocsCount,
     onboardingStoryCount,
     onboardingDocsCount,
+    svelteCsfCount,
     version: storyIndex.v,
   };
 }
