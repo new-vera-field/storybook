@@ -19,9 +19,21 @@ export const StyledHighlight: Story = {
     componentWrapperDecorator((story) => {
       const emit = useChannel({});
       emit(HIGHLIGHT, {
-        elements: ['h2', 'a', '.storybook-button'],
-        color: 'blue',
-        style: 'double', // 'dotted' | 'dashed' | 'solid' | 'double'
+        selectors: ['h2', 'a', '.storybook-button'],
+        menu: [
+          {
+            id: 'button-name',
+            title: 'Button name',
+            description: 'Every button needs a visible label.',
+            clickEvent: 'my-menu-click-event',
+          },
+          {
+            id: 'color-contrast',
+            title: 'Color contrast',
+            description: 'The color contrast must meet WCAG standards.',
+            clickEvent: 'my-menu-click-event',
+          }
+        ],
       });
       return story;
     }),
@@ -44,9 +56,21 @@ export const StyledHighlight = {
     (storyFn) => {
       const emit = useChannel({});
       emit(HIGHLIGHT, {
-        elements: ['h2', 'a', '.storybook-button'],
-        color: 'blue',
-        style: 'double', // 'dotted' | 'dashed' | 'solid' | 'double'
+        selectors: ['h2', 'a', '.storybook-button'],
+        menu: [
+          {
+            id: 'button-name',
+            title: 'Button name',
+            description: 'Every button needs a visible label.',
+            clickEvent: 'my-menu-click-event',
+          },
+          {
+            id: 'color-contrast',
+            title: 'Color contrast',
+            description: 'The color contrast must meet WCAG standards.',
+            clickEvent: 'my-menu-click-event',
+          }
+        ],
       });
       return storyFn();
     },
@@ -74,9 +98,21 @@ export const StyledHighlight: Story = {
     (storyFn) => {
       const emit = useChannel({});
       emit(HIGHLIGHT, {
-        elements: ['h2', 'a', '.storybook-button'],
-        color: 'blue',
-        style: 'double', // 'dotted' | 'dashed' | 'solid' | 'double'
+        selectors: ['h2', 'a', '.storybook-button'],
+        menu: [
+          {
+            id: 'button-name',
+            title: 'Button name',
+            description: 'Every button needs a visible label.',
+            clickEvent: 'my-menu-click-event',
+          },
+          {
+            id: 'color-contrast',
+            title: 'Color contrast',
+            description: 'The color contrast must meet WCAG standards.',
+            clickEvent: 'my-menu-click-event',
+          }
+        ],
       });
       return storyFn();
     },
@@ -99,9 +135,21 @@ export const StyledHighlight = {
     () => {
       const emit = useChannel({});
       emit(HIGHLIGHT, {
-        elements: ['h2', 'a', '.storybook-button'],
-        color: 'blue',
-        style: 'double', // 'dotted' | 'dashed' | 'solid' | 'double'
+        selectors: ['h2', 'a', '.storybook-button'],
+        menu: [
+          {
+            id: 'button-name',
+            title: 'Button name',
+            description: 'Every button needs a visible label.',
+            clickEvent: 'my-menu-click-event',
+          },
+          {
+            id: 'color-contrast',
+            title: 'Color contrast',
+            description: 'The color contrast must meet WCAG standards.',
+            clickEvent: 'my-menu-click-event',
+          }
+        ],
       });
       return {
         template: '<story />',
@@ -131,9 +179,21 @@ export const StyledHighlight: Story = {
     () => {
       const emit = useChannel({});
       emit(HIGHLIGHT, {
-        elements: ['h2', 'a', '.storybook-button'],
-        color: 'blue',
-        style: 'double', // 'dotted' | 'dashed' | 'solid' | 'double'
+        selectors: ['h2', 'a', '.storybook-button'],
+        menu: [
+          {
+            id: 'button-name',
+            title: 'Button name',
+            description: 'Every button needs a visible label.',
+            clickEvent: 'my-menu-click-event',
+          },
+          {
+            id: 'color-contrast',
+            title: 'Color contrast',
+            description: 'The color contrast must meet WCAG standards.',
+            clickEvent: 'my-menu-click-event',
+          }
+        ],
       });
       return {
         template: '<story />',
@@ -156,9 +216,21 @@ export const StyledHighlight = {
     (story) => {
       const emit = useChannel({});
       emit(HIGHLIGHT, {
-        elements: ['h2', 'a', '.storybook-button'],
-        color: 'blue',
-        style: 'double', // 'dotted' | 'dashed' | 'solid' | 'double'
+        selectors: ['h2', 'a', '.storybook-button'],
+        menu: [
+          {
+            id: 'button-name',
+            title: 'Button name',
+            description: 'Every button needs a visible label.',
+            clickEvent: 'my-menu-click-event',
+          },
+          {
+            id: 'color-contrast',
+            title: 'Color contrast',
+            description: 'The color contrast must meet WCAG standards.',
+            clickEvent: 'my-menu-click-event',
+          }
+        ],
       });
       return story();
     },
@@ -184,9 +256,21 @@ export const StyledHighlight: Story = {
     (story) => {
       const emit = useChannel({});
       emit(HIGHLIGHT, {
-        elements: ['h2', 'a', '.storybook-button'],
-        color: 'blue',
-        style: 'double', // 'dotted' | 'dashed' | 'solid' | 'double'
+        selectors: ['h2', 'a', '.storybook-button'],
+        menu: [
+          {
+            id: 'button-name',
+            title: 'Button name',
+            description: 'Every button needs a visible label.',
+            clickEvent: 'my-menu-click-event',
+          },
+          {
+            id: 'color-contrast',
+            title: 'Color contrast',
+            description: 'The color contrast must meet WCAG standards.',
+            clickEvent: 'my-menu-click-event',
+          }
+        ],
       });
       return story();
     },
