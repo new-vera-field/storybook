@@ -1,3 +1,8 @@
+## 8.6.13
+
+- Controls: Fix boxShadow on empty controls - [#27193](https://github.com/storybookjs/storybook/pull/27193), thanks @H0onnn!
+- Core: Fix using dates in expect statements - [#28413](https://github.com/storybookjs/storybook/pull/28413), thanks @yann-combarnous!
+
 ## 8.6.12
 
 - CLI: Only install Visual Test Addon if test feature is selected - [#30966](https://github.com/storybookjs/storybook/pull/30966), thanks @ghengeveld!
