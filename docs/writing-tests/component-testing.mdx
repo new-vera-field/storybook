@@ -187,6 +187,19 @@ Storybook’s `storybook/test` also provides APIs from [Vitest](https://vitest.d
 
 {/* prettier-ignore-end */}
 
+<Callout variant="info" title="TypeScript Note">
+  If you're using TypeScript, you might encounter an error like `Property 'onSubmit' does not exist on type '{}'` when accessing properties on the `args` object (e.g., `args.onSubmit`). This is because `args` is typed as a generic object (`{}`) by default in this test context.
+
+  To resolve this, you can provide an explicit type for `args` when accessing properties. For example, if your story args type is `LoginFormArgs`, you can use a type assertion:
+
+  ```ts
+  // Assuming LoginFormArgs is defined elsewhere
+  await waitFor(() => expect((args as LoginFormArgs).onSubmit).toHaveBeenCalled());
+  ```
+
+  Alternatively, ensure your test setup correctly infers or defines the type for `args` based on your story or component.
+</Callout>
+
 ### Group interactions with the `step` function
 
 For complex flows, it can be worthwhile to group sets of related interactions together using the `step` function. This allows you to provide a custom label that describes a set of interactions:
